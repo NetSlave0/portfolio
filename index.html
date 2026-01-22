@@ -1,160 +1,153 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NETSLAVE — Video Editor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NetSlave — Video Editor</title>
+
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: Arial, Helvetica, sans-serif;
-    }body {
-  background: #0b0b0b;
-  color: #ffffff;
-  line-height: 1.6;
-  scroll-behavior: smooth;
-}
+    }
 
-a {
-  color: #e10600;
-  text-decoration: none;
-}
+    body {
+      background: #0b0b0b;
+      color: #ffffff;
+      scroll-behavior: smooth;
+    }
 
-/* HERO */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-}
+    section {
+      min-height: 100vh;
+      padding: 80px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
 
-.hero h1 {
-  font-size: 3.2rem;
-  letter-spacing: 4px;
-}
+    h1 {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
 
-.hero span {
-  color: #e10600;
-}
+    h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
 
-.hero p {
-  margin-top: 8px;
-  font-size: 1.1rem;
-  opacity: 0.85;
-}
+    h3 {
+      font-size: 22px;
+      margin: 30px 0 15px;
+      color: #e10600;
+    }
 
-.scroll {
-  margin-top: 30px;
-  font-size: 0.85rem;
-  opacity: 0.6;
-}
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      opacity: 0.9;
+    }
 
-/* SECTIONS */
-.section {
-  padding: 60px 20px;
-  max-width: 1100px;
-  margin: auto;
-}
+    .accent {
+      color: #e10600;
+    }
 
-.section h2 {
-  text-align: center;
-  margin-bottom: 24px;
-  letter-spacing: 3px;
-}
+    .hero {
+      text-align: left;
+    }
 
-/* ABOUT */
-.about {
-  text-align: center;
-  max-width: 700px;
-  margin: auto;
-  opacity: 0.85;
-  font-size: 1.05rem;
-}
+    .hero p {
+      margin-top: 10px;
+      font-size: 18px;
+    }
 
-/* WORKS */
-.videos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-}
+    .video-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
 
-iframe {
-  width: 100%;
-  aspect-ratio: 9 / 16;
-  border: none;
-  background: #000;
-}
+    iframe {
+      width: 100%;
+      max-width: 420px;
+      aspect-ratio: 9 / 16;
+      border-radius: 12px;
+      border: none;
+    }
 
-/* CONTACTS */
-.contacts {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  font-size: 1.1rem;
-}
+    .soon {
+      opacity: 0.5;
+      font-style: italic;
+    }
 
-footer {
-  text-align: center;
-  padding: 30px 10px;
-  font-size: 0.9rem;
-  opacity: 0.4;
-}
+    .contact a {
+      color: #e10600;
+      text-decoration: none;
+      font-size: 18px;
+    }
 
-/* DECOR */
-.decor {
-  position: absolute;
-  opacity: 0.08;
-  pointer-events: none;
-}
+    .contact a:hover {
+      text-decoration: underline;
+    }
 
-.camera.left {
-  top: 20%;
-  left: 5%;
-  width: 140px;
-  height: 140px;
-  background: url('https://upload.wikimedia.org/wikipedia/commons/3/3f/Video_camera_icon.svg') no-repeat center/contain;
-}
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 36px;
+      }
 
-.camera.right {
-  bottom: 15%;
-  right: 6%;
-  width: 180px;
-  height: 180px;
-  background: url('https://upload.wikimedia.org/wikipedia/commons/3/3f/Video_camera_icon.svg') no-repeat center/contain;
-}
-
+      h2 {
+        font-size: 28px;
+      }
+    }
   </style>
 </head>
-<body>  <!-- HERO -->  <section class="hero">
-    <div class="decor camera left"></div>
-    <div class="decor camera right"></div><h1>HI, I’M <span>NETSLAVE</span></h1>
-<p>Viral your content with me</p>
-<div class="scroll">scroll down ↓</div>
 
-  </section>  <!-- ABOUT -->  <section class="section" id="about">
-    <h2>ABOUT ME</h2>
-    <p class="about">
-      I am a short-form video editor focused on creating viral content.
-      I work with Shorts, Reels and TikTok, paying attention to rhythm,
-      pacing and viewer retention.
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>HI, I’M <span class="accent">NETSLAVE</span></h1>
+    <p>Viral your content with me.</p>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I’m a video editor focused on short-form and vertical content.
+      I help creators and brands turn raw footage into engaging,
+      scroll-stopping videos.
     </p>
-  </section>  <!-- WORKS -->  <section class="section" id="works">
-    <h2>WORKS</h2>
-    <div class="videos">
-      <iframe src="https://www.youtube.com/embed/FX2lK9WHMrk" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/k3HxhMZgOww" allowfullscreen></iframe>
+  </section>
+
+  <!-- WORKS -->
+  <section id="works">
+    <h2>Works</h2>
+
+    <h3>Vertical Content</h3>
+    <div class="video-grid">
+      <iframe
+        src="https://www.youtube.com/embed/nsPSvWL2ygU"
+        title="Vertical Content">
+      </iframe>
     </div>
-  </section>  <!-- CONTACTS -->  <section class="section" id="contacts">
-    <h2>CONTACT ME</h2>
-    <div class="contacts">
-      <a href="https://t.me/NetSlave0" target="_blank">Telegram</a>
-    </div>
-  </section>  <footer>
-    © NETSLAVE
-  </footer></body>
+
+    <h3>Motion Graphics</h3>
+    <p class="soon">Coming soon</p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>
+      Telegram: 
+      <a href="https://t.me/NetSlave0" target="_blank">@NetSlave0</a>
+    </p>
+  </section>
+
+</body>
 </html>
