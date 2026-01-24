@@ -2,12 +2,138 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NetSlave — Video Editor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    /* ===== RESET ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #0f0f0f;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #e0e0e0;
+      text-decoration: none;
+    }
+
+    /* ===== LAYOUT ===== */
+    section, header, footer {
+      max-width: 900px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    header {
+      text-align: center;
+      padding-top: 80px;
+    }
+
+    h1 {
+      font-size: 48px;
+      letter-spacing: 2px;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      margin: 40px 0 20px;
+      color: #aaa;
+      font-weight: normal;
+    }
+
+    p {
+      color: #bdbdbd;
+      max-width: 600px;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #222;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    /* ===== CONTACT ===== */
+    .contacts {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .contacts a {
+      border: 1px solid #333;
+      padding: 10px 18px;
+      transition: 0.2s;
+    }
+
+    .contacts a:hover {
+      background: #1a1a1a;
+    }
+
+    /* ===== WORKS ===== */
+    .works-buttons {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .works-buttons button {
+      background: none;
+      border: 1px solid #333;
+      color: #e0e0e0;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .works-buttons button:hover,
+    .works-buttons button.active {
+      background: #1a1a1a;
+    }
+
+    .works-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .work-item iframe {
+      width: 100%;
+      border-radius: 8px;
+      border: none;
+    }
+
+    .shorts iframe {
+      aspect-ratio: 9 / 16;
+    }
+
+    .motion iframe {
+      aspect-ratio: 16 / 9;
+    }
+
+    footer {
+      text-align: center;
+      color: #555;
+      padding-bottom: 40px;
+    }
+  </style>
 </head>
+
 <body>
 
-  <!-- NICK / NAME -->
+  <!-- HEADER -->
   <header>
     <h1>NetSlave</h1>
     <p>Video Editor</p>
@@ -15,42 +141,26 @@
 
   <hr>
 
-  <!-- ABOUT ME -->
+  <!-- ABOUT -->
   <section>
     <h2>About me</h2>
-    <p>  
+    <p>
+      Beginner video editor with 3 months of experience.
       I create shorts, vertical content and motion graphics.
     </p>
   </section>
 
   <hr>
 
-  <!-- CONTACT ME -->
+  <!-- CONTACT -->
   <section>
     <h2>Contact me</h2>
 
-    <ul>
-      <li>
-        Telegram:
-        <a href="https://t.me/NetSlave0" target="_blank">
-          @NetSlave0
-        </a>
-      </li>
-
-      <li>
-        X (Twitter):
-        <a href="https://x.com/NetSlave260857" target="_blank">
-          NetSlave260857
-        </a>
-      </li>
-
-      <li>
-        Email:
-        <a href="mailto:netslave0@gmail.com">
-          netslave0@gmail.com
-        </a>
-      </li>
-    </ul>
+    <div class="contacts">
+      <a href="https://t.me/NetSlave0" target="_blank">Telegram</a>
+      <a href="https://x.com/NetSlave260857" target="_blank">X</a>
+      <a href="mailto:netslave0@gmail.com">Email</a>
+    </div>
   </section>
 
   <hr>
@@ -59,68 +169,64 @@
   <section>
     <h2>Works</h2>
 
-    <h3>Shorts</h3>
+    <div class="works-buttons">
+      <button class="active" onclick="filterWorks('all', this)">All</button>
+      <button onclick="filterWorks('shorts', this)">Shorts</button>
+      <button onclick="filterWorks('motion', this)">Motion Graphics</button>
+    </div>
 
-    <iframe
-      width="315"
-      height="560"
-      src="https://www.youtube.com/embed/FX2lK9WHMrk"
-      title="Shorts 1"
-      frameborder="0"
-      allowfullscreen>
-    </iframe>
+    <div class="works-grid">
 
-    <br><br>
+      <!-- SHORTS -->
+      <div class="work-item shorts">
+        <iframe src="https://www.youtube.com/embed/FX2lK9WHMrk" allowfullscreen></iframe>
+      </div>
 
-    <iframe
-      width="315"
-      height="560"
-      src="https://www.youtube.com/embed/k3HxhMZgOww"
-      title="Shorts 2"
-      frameborder="0"
-      allowfullscreen>
-    </iframe>
+      <div class="work-item shorts">
+        <iframe src="https://www.youtube.com/embed/k3HxhMZgOww" allowfullscreen></iframe>
+      </div>
 
-    <br><br>
+      <div class="work-item shorts">
+        <iframe src="https://www.youtube.com/embed/oCslosLJWTs" allowfullscreen></iframe>
+      </div>
 
-    <iframe
-      width="315"
-      height="560"
-      src="https://www.youtube.com/embed/oCslosLJWTs"
-      title="Shorts 3"
-      frameborder="0"
-      allowfullscreen>
-    </iframe>
+      <!-- MOTION -->
+      <div class="work-item motion">
+        <iframe src="https://www.youtube.com/embed/nsPSvWL2ygU" allowfullscreen></iframe>
+      </div>
 
-    <h3>Motion Graphics</h3>
+      <div class="work-item motion">
+        <iframe src="https://www.youtube.com/embed/YNNbQFf8SiM" allowfullscreen></iframe>
+      </div>
 
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/nsPSvWL2ygU"
-      title="Motion Graphics 1"
-      frameborder="0"
-      allowfullscreen>
-    </iframe>
-
-    <br><br>
-
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/YNNbQFf8SiM"
-      title="Motion Graphics 2"
-      frameborder="0"
-      allowfullscreen>
-    </iframe>
-
+    </div>
   </section>
 
   <hr>
 
   <footer>
-    <p>© NetSlave</p>
+    © NetSlave
   </footer>
+
+  <!-- JS -->
+  <script>
+    function filterWorks(type, btn) {
+      const items = document.querySelectorAll('.work-item');
+      const buttons = document.querySelectorAll('.works-buttons button');
+
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      items.forEach(item => {
+        if (type === 'all' || item.classList.contains(type)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+  </script>
 
 </body>
 </html>
+
