@@ -4,144 +4,123 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NetSlave — Video Editor</title>
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    body {
-      background: #0b0b0b;
-      color: #ffffff;
-      scroll-behavior: smooth;
-    }
-
-    section {
-      min-height: 100vh;
-      padding: 70px 20px;
-      max-width: 900px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    h1 {
-      font-size: 46px;
-      margin-bottom: 8px;
-    }
-
-    h2 {
-      font-size: 34px;
-      margin-bottom: 20px;
-    }
-
-    h3 {
-      font-size: 22px;
-      margin: 30px 0 15px;
-      color: #e10600;
-    }
-
-    p {
-      font-size: 16px;
-      line-height: 1.5;
-      opacity: 0.9;
-    }
-
-    .accent {
-      color: #e10600;
-    }
-
-    /* HERO */
-    .hero p {
-      font-size: 18px;
-      margin-top: 6px;
-    }
-
-    /* WORKS */
-    .video-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    iframe {
-      width: 100%;
-      max-width: 280px;
-      aspect-ratio: 9 / 16;
-      border-radius: 12px;
-      border: none;
-    }
-
-    .motion iframe {
-      aspect-ratio: 16 / 9;
-      max-width: 420px;
-    }
-
-    /* CONTACT */
-    .contact a {
-      color: #e10600;
-      text-decoration: none;
-      font-size: 18px;
-    }
-
-    .contact a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 600px) {
-      h1 { font-size: 36px; }
-      h2 { font-size: 28px; }
-    }
-  </style>
 </head>
-
 <body>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h1>HI, I’M <span class="accent">NETSLAVE</span></h1>
-    <p>Viral your content with me.</p>
-  </section>
+  <!-- NICK / NAME -->
+  <header>
+    <h1>NetSlave</h1>
+    <p>Video Editor</p>
+  </header>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I’m a video editor focused on short-form and motion graphics.
-      I help creators and brands turn ideas into engaging visual content.
+  <hr>
+
+  <!-- ABOUT ME -->
+  <section>
+    <h2>About me</h2>
+    <p>  
+      I create shorts, vertical content and motion graphics.
     </p>
   </section>
+
+  <hr>
+
+  <!-- CONTACT ME -->
+  <section>
+    <h2>Contact me</h2>
+
+    <ul>
+      <li>
+        Telegram:
+        <a href="https://t.me/NetSlave0" target="_blank">
+          @NetSlave0
+        </a>
+      </li>
+
+      <li>
+        X (Twitter):
+        <a href="https://x.com/NetSlave260857" target="_blank">
+          NetSlave260857
+        </a>
+      </li>
+
+      <li>
+        Email:
+        <a href="mailto:netslave0@gmail.com">
+          netslave0@gmail.com
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <hr>
 
   <!-- WORKS -->
-  <section id="works">
+  <section>
     <h2>Works</h2>
 
-    <!-- Vertical Content -->
-    <h3>Vertical Content</h3>
-    <div class="video-grid">
-      <iframe src="https://www.youtube.com/embed/FX2lK9WHMrk" title="Vertical Content 1" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/k3HxhMZgOww" title="Vertical Content 2" allowfullscreen></iframe>
-    </div>
+    <h3>Shorts</h3>
 
-    <!-- Motion Graphics -->
+    <iframe
+      width="315"
+      height="560"
+      src="https://www.youtube.com/embed/FX2lK9WHMrk"
+      title="Shorts 1"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+
+    <br><br>
+
+    <iframe
+      width="315"
+      height="560"
+      src="https://www.youtube.com/embed/k3HxhMZgOww"
+      title="Shorts 2"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+
+    <br><br>
+
+    <iframe
+      width="315"
+      height="560"
+      src="https://www.youtube.com/embed/oCslosLJWTs"
+      title="Shorts 3"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+
     <h3>Motion Graphics</h3>
-    <div class="video-grid motion">
-      <iframe src="https://www.youtube.com/embed/nsPSvWL2ygU" title="Motion Graphics Project" allowfullscreen></iframe>
-    </div>
+
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/nsPSvWL2ygU"
+      title="Motion Graphics 1"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+
+    <br><br>
+
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/YNNbQFf8SiM"
+      title="Motion Graphics 2"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <p>
-      Telegram:
-      <a href="https://t.me/NetSlave0" target="_blank">@NetSlave0</a>
-    </p>
-  </section>
+  <hr>
+
+  <footer>
+    <p>© NetSlave</p>
+  </footer>
 
 </body>
 </html>
