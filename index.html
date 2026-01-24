@@ -21,34 +21,53 @@
     }
 
     a {
-      color: #e0e0e0;
+      color: #ff3333;
       text-decoration: none;
+      transition: 0.2s;
     }
 
-    /* ===== LAYOUT ===== */
-    section, header, footer {
-      max-width: 900px;
-      margin: auto;
-      padding: 60px 20px;
+    a:hover {
+      color: #ff5555;
     }
 
+    hr {
+      border: none;
+      border-top: 1px solid #222;
+      margin: 40px 0;
+    }
+
+    /* ===== HEADER ===== */
     header {
       text-align: center;
-      padding-top: 80px;
+      padding: 80px 20px 40px;
     }
 
-    h1 {
+    header h1 {
       font-size: 48px;
       letter-spacing: 2px;
+      color: #ff3333;
+    }
+
+    header p {
+      color: #bdbdbd;
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
     }
 
     h2 {
       font-size: 28px;
       margin-bottom: 20px;
+      color: #ff3333;
     }
 
     h3 {
-      margin: 40px 0 20px;
+      margin: 30px 0 15px;
       color: #aaa;
       font-weight: normal;
     }
@@ -58,41 +77,35 @@
       max-width: 600px;
     }
 
-    hr {
-      border: none;
-      border-top: 1px solid #222;
-      max-width: 900px;
-      margin: auto;
-    }
-
     /* ===== CONTACT ===== */
     .contacts {
       display: flex;
-      gap: 20px;
       flex-wrap: wrap;
+      gap: 15px;
     }
 
     .contacts a {
-      border: 1px solid #333;
+      border: 1px solid #ff3333;
       padding: 10px 18px;
       transition: 0.2s;
     }
 
     .contacts a:hover {
-      background: #1a1a1a;
+      background: #330000;
     }
 
     /* ===== WORKS ===== */
     .works-buttons {
       display: flex;
+      flex-wrap: wrap;
       gap: 15px;
       margin-bottom: 30px;
     }
 
     .works-buttons button {
       background: none;
-      border: 1px solid #333;
-      color: #e0e0e0;
+      border: 1px solid #ff3333;
+      color: #ff3333;
       padding: 10px 20px;
       cursor: pointer;
       transition: 0.2s;
@@ -100,13 +113,14 @@
 
     .works-buttons button:hover,
     .works-buttons button.active {
-      background: #1a1a1a;
+      background: #330000;
+      color: #ff5555;
     }
 
     .works-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
+      gap: 25px;
     }
 
     .work-item iframe {
@@ -126,7 +140,29 @@
     footer {
       text-align: center;
       color: #555;
-      padding-bottom: 40px;
+      padding: 40px 20px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 36px;
+      }
+
+      header p {
+        font-size: 16px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .works-buttons {
+        flex-direction: column;
+        gap: 10px;
+      }
     }
   </style>
 </head>
@@ -145,7 +181,7 @@
   <section>
     <h2>About me</h2>
     <p>
-      Beginner video editor with 3 months of experience.
+      Beginner video editor.  
       I create shorts, vertical content and motion graphics.
     </p>
   </section>
@@ -155,7 +191,6 @@
   <!-- CONTACT -->
   <section>
     <h2>Contact me</h2>
-
     <div class="contacts">
       <a href="https://t.me/NetSlave0" target="_blank">Telegram</a>
       <a href="https://x.com/NetSlave260857" target="_blank">X</a>
@@ -181,11 +216,9 @@
       <div class="work-item shorts">
         <iframe src="https://www.youtube.com/embed/FX2lK9WHMrk" allowfullscreen></iframe>
       </div>
-
       <div class="work-item shorts">
         <iframe src="https://www.youtube.com/embed/k3HxhMZgOww" allowfullscreen></iframe>
       </div>
-
       <div class="work-item shorts">
         <iframe src="https://www.youtube.com/embed/oCslosLJWTs" allowfullscreen></iframe>
       </div>
@@ -194,7 +227,6 @@
       <div class="work-item motion">
         <iframe src="https://www.youtube.com/embed/nsPSvWL2ygU" allowfullscreen></iframe>
       </div>
-
       <div class="work-item motion">
         <iframe src="https://www.youtube.com/embed/YNNbQFf8SiM" allowfullscreen></iframe>
       </div>
@@ -229,4 +261,7 @@
 
 </body>
 </html>
+
+
+
 
